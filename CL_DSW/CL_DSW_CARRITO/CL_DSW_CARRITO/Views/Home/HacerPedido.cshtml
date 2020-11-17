@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "HacerPedido";
+}
+
+<h2>HacerPedido</h2>
+
+<form action="/Home/HacerPedido" method="post">
+    @Html.DropDownList("IDE_VEN", (SelectList)ViewBag.vendedor, new { @class = "form-control" })
+    @Html.DropDownList("IDE_CLI", (SelectList)ViewBag.cliente, new { @class = "form-control" })
+    <input type="submit" name="name" value="Enviar" />
+</form>
+

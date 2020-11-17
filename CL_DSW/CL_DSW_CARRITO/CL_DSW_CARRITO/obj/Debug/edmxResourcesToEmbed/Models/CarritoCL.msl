@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FUENTESODAModelStoreContainer" CdmEntityContainer="FUENTESODAEntities">
+    <EntitySetMapping Name="BOLETA">
+      <EntityTypeMapping TypeName="FUENTESODAModel.BOLETA">
+        <MappingFragment StoreEntitySet="BOLETA">
+          <ScalarProperty Name="NUM_BOL" ColumnName="NUM_BOL" />
+          <ScalarProperty Name="FEC_BOL" ColumnName="FEC_BOL" />
+          <ScalarProperty Name="IDE_CLI" ColumnName="IDE_CLI" />
+          <ScalarProperty Name="IDE_VEN" ColumnName="IDE_VEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATEGORIA">
+      <EntityTypeMapping TypeName="FUENTESODAModel.CATEGORIA">
+        <MappingFragment StoreEntitySet="CATEGORIA">
+          <ScalarProperty Name="IDE_CAT" ColumnName="IDE_CAT" />
+          <ScalarProperty Name="DES_CAT" ColumnName="DES_CAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTE">
+      <EntityTypeMapping TypeName="FUENTESODAModel.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="IDE_CLI" ColumnName="IDE_CLI" />
+          <ScalarProperty Name="NOM_CLI" ColumnName="NOM_CLI" />
+          <ScalarProperty Name="MOV_CLI" ColumnName="MOV_CLI" />
+          <ScalarProperty Name="IDE_DIS" ColumnName="IDE_DIS" />
+          <ScalarProperty Name="COR_CLI" ColumnName="COR_CLI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLEBOLETA">
+      <EntityTypeMapping TypeName="FUENTESODAModel.DETALLEBOLETA">
+        <MappingFragment StoreEntitySet="DETALLEBOLETA">
+          <ScalarProperty Name="NUM_BOL" ColumnName="NUM_BOL" />
+          <ScalarProperty Name="IDE_PRO" ColumnName="IDE_PRO" />
+          <ScalarProperty Name="CAN_ART" ColumnName="CAN_ART" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DISTRITO">
+      <EntityTypeMapping TypeName="FUENTESODAModel.DISTRITO">
+        <MappingFragment StoreEntitySet="DISTRITO">
+          <ScalarProperty Name="IDE_DIS" ColumnName="IDE_DIS" />
+          <ScalarProperty Name="DES_DIS" ColumnName="DES_DIS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTO">
+      <EntityTypeMapping TypeName="FUENTESODAModel.PRODUCTO">
+        <MappingFragment StoreEntitySet="PRODUCTO">
+          <ScalarProperty Name="IDE_PRO" ColumnName="IDE_PRO" />
+          <ScalarProperty Name="DES_PRO" ColumnName="DES_PRO" />
+          <ScalarProperty Name="IDE_CAT" ColumnName="IDE_CAT" />
+          <ScalarProperty Name="PRE_PRO" ColumnName="PRE_PRO" />
+          <ScalarProperty Name="STO_PRO" ColumnName="STO_PRO" />
+          <ScalarProperty Name="IMG_PRO" ColumnName="IMG_PRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VENDEDOR">
+      <EntityTypeMapping TypeName="FUENTESODAModel.VENDEDOR">
+        <MappingFragment StoreEntitySet="VENDEDOR">
+          <ScalarProperty Name="IDE_VEN" ColumnName="IDE_VEN" />
+          <ScalarProperty Name="NOM_VEN" ColumnName="NOM_VEN" />
+          <ScalarProperty Name="APE_VEN" ColumnName="APE_VEN" />
+          <ScalarProperty Name="DIR_VEN" ColumnName="DIR_VEN" />
+          <ScalarProperty Name="TEL_VEN" ColumnName="TEL_VEN" />
+          <ScalarProperty Name="IDE_DIS" ColumnName="IDE_DIS" />
+          <ScalarProperty Name="COR_VEN" ColumnName="COR_VEN" />
+          <ScalarProperty Name="SUE_VEN" ColumnName="SUE_VEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ListarProducto" FunctionName="FUENTESODAModel.Store.ListarProducto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FUENTESODAModel.ListarProducto_Result">
+          <ScalarProperty Name="IDE_PRO" ColumnName="IDE_PRO" />
+          <ScalarProperty Name="DES_PRO" ColumnName="DES_PRO" />
+          <ScalarProperty Name="IDE_CAT" ColumnName="IDE_CAT" />
+          <ScalarProperty Name="PRE_PRO" ColumnName="PRE_PRO" />
+          <ScalarProperty Name="STO_PRO" ColumnName="STO_PRO" />
+          <ScalarProperty Name="IMG_PRO" ColumnName="IMG_PRO" />
+          <ScalarProperty Name="IDE_CAT1" ColumnName="IDE_CAT1" />
+          <ScalarProperty Name="DES_CAT" ColumnName="DES_CAT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ListarProductoId" FunctionName="FUENTESODAModel.Store.ListarProductoId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FUENTESODAModel.ListarProductoId_Result">
+          <ScalarProperty Name="IDE_PRO" ColumnName="IDE_PRO" />
+          <ScalarProperty Name="DES_PRO" ColumnName="DES_PRO" />
+          <ScalarProperty Name="IDE_CAT" ColumnName="IDE_CAT" />
+          <ScalarProperty Name="PRE_PRO" ColumnName="PRE_PRO" />
+          <ScalarProperty Name="STO_PRO" ColumnName="STO_PRO" />
+          <ScalarProperty Name="IMG_PRO" ColumnName="IMG_PRO" />
+          <ScalarProperty Name="IDE_CAT1" ColumnName="IDE_CAT1" />
+          <ScalarProperty Name="DES_CAT" ColumnName="DES_CAT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

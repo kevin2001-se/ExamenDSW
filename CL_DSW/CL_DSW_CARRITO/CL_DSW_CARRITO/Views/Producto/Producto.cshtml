@@ -1,0 +1,83 @@
+﻿@model IEnumerable<CL_DSW_CARRITO.Models.PRODUCTO>
+
+@{
+    ViewBag.Title = "Producto";
+}
+
+
+<div class="container">
+    <h3>Seleccionar un Producto</h3>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="site_product">
+                <div class="row">
+                    <div class="img_product">
+                        <img src="../@item.IMG_PRO" alt="">
+                    </div>
+                    <div class="info_product">
+                        <div class="codigo">
+                            <b>Codigo :</b><span class="id_codigo"> @item.IDE_PRO</span>
+                        </div>
+                        <div class="descripcion">
+                            <span class="nombre_pro">
+                                <b>Nombre :</b> @item.DES_PRO
+                            </span>
+                            <span class="categoria_pro">
+                                <b>Categoria :</b> @item.CATEGORIA.DES_CAT
+                            </span>
+                            <span class="Precio">
+                                <b>Precio :</b> @String.Format("{0:C}", item.PRE_PRO)
+                            </span>
+                            <span class="Stock">
+                                <b>Stock :</b> @item.STO_PRO
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="accion_product">
+                    <div class="cantidad_pro">
+                        <label for="">Ingrese Cantidad</label>
+                        <input type="number" class="cantidad" name="" id="   ">
+                    </div>
+                    <div class="btn_ordenar">
+                        <a href="#" class="ordenar">Ordenar</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+
+    $(function () {
+        $(".ordenar").on("click", function (event) {
+            event.preventDefault();
+            var ProductoId = $(this).parent().parent().parent().find(".id_codigo").text();
+            var cantidad = $(this).parent().parent().find(".cantidad").val();
+            console.log(ProductoId + "-" + cantidad);
+            $.ajax({
+                url: "@Url.Action("AgregarCarrito", "Carrito")",
+                data: { id : ProductoId, cantidad: cantidad },
+                type: "post",
+                success: function (respose) {
+                    window.location.href = "@Url.Action("AgregarCarrito", "Carrito")";
+                },
+                error: function (err, error) {
+                    alert(error);
+                }
+            });
+        });
+        $(".numbers").keydown(function (e) {
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 40]) != -1
+                (e.keyCode == 65 && e.ctrlKey === true) ||
+                (e - keyCode >= 35 && e.keyCode <= 39)) {
+                return;
+            }
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
+    });
+</script>

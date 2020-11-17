@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="42f9f58d7aef4762a74745c052029072" Name="Diagram1">
+        <EntityTypeShape EntityType="FUENTESODAModel.BOLETA" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="FUENTESODAModel.CATEGORIA" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FUENTESODAModel.CLIENTE" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FUENTESODAModel.DETALLEBOLETA" Width="1.5" PointX="7.5" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FUENTESODAModel.DISTRITO" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FUENTESODAModel.PRODUCTO" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FUENTESODAModel.VENDEDOR" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="FUENTESODAModel.FK__BOLETA__IDE_CLI__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="FUENTESODAModel.FK__BOLETA__IDE_VEN__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="FUENTESODAModel.FK__DETALLEBO__NUM_B__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="FUENTESODAModel.FK__PRODUCTO__IDE_CA__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="FUENTESODAModel.FK__CLIENTE__IDE_DIS__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="FUENTESODAModel.FK__DETALLEBO__IDE_P__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="FUENTESODAModel.FK__VENDEDOR__IDE_DI__2D27B809" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
